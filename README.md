@@ -29,7 +29,7 @@ This returns an ``ArrayList`` for ``JCalDavCalendarItem``, which contain the dat
 Example:
 
 ```java
-JCalDavClient client = new JCalDavClient();
+JCalDavClient client = new JCalDavClient("url", "uname", "password");
 ArrayList<JCalDavCalendarItem> items = client.fetchCalendar();
 
 for(JCalDavCalendarItem item : items){
@@ -43,7 +43,7 @@ In order to add a calendar item to your calendar, you have to first create a ``J
 Example:
 
 ```java
-JCalDavClient client = new JCalDavClient();
+JCalDavClient client = new JCalDavClient("url", "uname", "password");
 
 JCalDavCalenderItem item = new JCalDavCalenderItem("TEST TEST", "still testing", "testlandia", LocalDateTime.now(), LocalDateTime.now().plusHours(1));
 client.saveItemToCalendar(item);
@@ -55,7 +55,7 @@ Even though I would like to add this feature, in the mean time, you can delete i
 
 Example:
 ```java
-JCalDavClient client = new JCalDavClient();
+JCalDavClient client = new JCalDavClient("url", "uname", "password");
 
 JCalDavCalenderItem item = new JCalDavCalenderItem("TEST TEST", "still testing", "testlandia", LocalDateTime.now(), LocalDateTime.now().plusHours(1));
 client.saveItemToCalendar(item);
