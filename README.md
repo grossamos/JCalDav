@@ -22,6 +22,21 @@ With JCalDav being somewhat new there are still a bunch of things that it still 
 ## Usage
 Here we will be running through the main three use cases for JCalDav: fetching, creating and finally deleting calendar data.
 
+### Adding Maven Dependency
+After having checked out the repo with ``git clone``, run a ``mvn install`` from within the root of this project.
+
+Now add ``JCalDav`` as a dependency in your own project:
+
+```xml
+<dependency>
+    <groupId>com.amosgross</groupId>
+    <artifactId>JCalDav</artifactId>
+    <version>1.0-SNAPSHOT</version>
+</dependency>
+```
+
+For further information, please consult with [Stack Overflow](https://stackoverflow.com/questions/44074179/how-to-add-local-project-not-jar-as-a-dependency-to-a-maven-project).
+
 ### Fetching calendar data
 Fetching Calendar data can be done by initializing a ``JCalDavClient`` object and calling ``fetchCalendar``.
 This returns an ``ArrayList`` for ``JCalDavCalendarItem``, which contain the data found in your calendar.
